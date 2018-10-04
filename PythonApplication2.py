@@ -1,21 +1,8 @@
 name=input("enter your name: ")
-age=int(input("enter your age: "))
-height=int(input("enter your height in cm: "))
-weight=int(input("enter your weight in kilograms: "))
-eye=input("enter your eye colour: ")
-hair=input("enter your hair collor: ")
-if age<5:
-    print("you are a baby")
-elif age>80:
-    print("you are an old man")
-if height<50:
-    print("you are a short man")
-elif height>180:
-    print("you are a tall man")
-if weight<50:
-    print("you should eat smt")
-elif weight>120:
-    print("you should go to gym")
+annual_salary=int(input("enter your annual salary: "))
+portion_saved=int(input("how much you want to save each month (%)): "))
+total_cost=inext(input("how much your dream house costs: "))
+current_savings=int(input("enter your current savings: "))
 
-
-
+portion_deposit=float(total_cost*0.2)
+whi
