@@ -1,7 +1,7 @@
 import random
 guesses=0
 n=random.randint(0,100)
-
+#guess=input("enter your guess ")
 print(n)
 while True:
     guess=int(input("enter your guess "))
@@ -11,4 +11,9 @@ while True:
         break
     else:
         guesses+=1
+        if guess<n:
+            print("your guess is lower")
+        else:
+            print("your guess is higher")
+       
        
