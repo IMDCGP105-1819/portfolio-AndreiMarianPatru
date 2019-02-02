@@ -88,8 +88,9 @@ def get_available_letters(letters_guessed):
     returns: string (of letters), comprised of letters that represents which letters have not
       yet been guessed.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    all=list(string.ascii_lowercase)
+    available=[available for available in all if available not in letters_guessed]
+    return ''.join(available)
 
 
 
