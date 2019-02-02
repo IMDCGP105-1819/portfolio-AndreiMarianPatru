@@ -54,15 +54,8 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    temp=list(secret_word)
-    x=[x for x in letters_guessed if x  in secret_word  ]
-    if x==temp:
-        return True
-    else:
-        return False
-
-
-
+    # FILL IN YOUR CODE HERE AND DELETE "pass"
+    pass
 
 
 
@@ -74,18 +67,7 @@ def get_guessed_word(secret_word, letters_guessed):
       which letters in secret_word have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    word=[]
-    temp=list(secret_word)
-    for x in secret_word:
-        if x in letters_guessed:
-            word.append(x)
-        else:
-            word.append("_ ")
-    final=''.join(word)
-    return final
-
-
-
+    pass
 
 
 
@@ -96,11 +78,7 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    all=list(string.ascii_lowercase)
-    available=[available for available in all if available not in letters_guessed]
-    return ''.join(available)
-
-
+    pass
 
 
 
@@ -130,64 +108,7 @@ def hangman(secret_word):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    letters_guessed=[]
-    guesses=6
-    warnings=3
-    length=len(secret_word)
+    pass
 
-    print("Welcome to the game Hangman")
-    print("I am thinking of a word that is ",length," letters long")
-
-    while True:
-        if guesses==0:
-            print("You lost, the word was ",secret_word)
-            break
-        if letters_guessed==list(secret_word):
-            print("you won!")
-            score=guesses*len(secret_word)
-            print("Your score is",score)
-            break
-        print("You have ",guesses," guesses left.")
-        print("available letters: ",get_available_letters(letters_guessed))
-        print("Enter your guess:")
-        a=input()
-        if a not in list(string.ascii_letters ):
-            print("This is not a valid input")
-            warnings-=1
-            print("Now you have ",warnings,' left, at 3 warnings you will lose a guess')
-            if warnings==0:
-                guesses-=1
-                warnings=3
-            print("Let's try one more time!")
-            continue
-        else:
-            if a in string.ascii_uppercase:
-                a=a.lower()
-
-            if a in letters_guessed:
-                print("You already tried that guess")
-                warnings-=1
-                print("Now you have ",warnings,' warnings left, at 0 warnings you will lose a guess')
-                if warnings==0:
-                    guesses-=1
-                    warnings=3
-                print("Let's try one more time!")
-                continue
-            letters_guessed.append(a)
-
-
-
-        if a in secret_word:
-            print("Good guess:",get_guessed_word(secret_word, letters_guessed))
-            continue
-        else:
-            print("Oops! That letter is not in word: ",get_guessed_word(secret_word, letters_guessed))
-            guesses-=1
-            continue
-
-
-
-
-
-secret_word =choose_word(wordlist)
-hangman(secret_word)
+    secret_word = choose_word(wordlist)
+    hangman(secret_word)
