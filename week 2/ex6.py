@@ -20,7 +20,7 @@ else:
     print("You are tall")
 if weight<40:
     print("You are fit")
-elif age>=40 and age<=100:
+elif weight>=40 and weight<=100:
     print("You are nither fit or fat")
 else:
     print("You are fat")

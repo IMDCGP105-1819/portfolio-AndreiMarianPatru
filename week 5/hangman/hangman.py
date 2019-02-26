@@ -174,5 +174,5 @@ def hangman(secret_word):
             guesses-=1
             continue
 
-    secret_word = choose_word(wordlist)
-    hangman(secret_word)
+secret_word = choose_word(wordlist)
+hangman(secret_word)
